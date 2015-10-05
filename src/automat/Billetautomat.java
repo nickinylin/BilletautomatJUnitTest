@@ -44,24 +44,24 @@ public class Billetautomat {
 	 * Opdater total og nedskriv balancen med billetprisen
 	 */
 	public void udskrivBillet() {
-		if (balance<billetpris) {
+		if (balance<10) {
 			System.out.println("Du mangler at indbetale nogle penge");
-		} else {
-			System.out.println("##########B##T#########");
-			System.out.println("# BlueJ Trafikselskab #");
-			System.out.println("#                     #");
-			System.out.println("#        Billet       #");
-			System.out.println("#        " + billetpris + " kr.       #");
-			System.out.println("#                     #");
-			System.out.println("##########B##T#########");
-			System.out.println("# Du har " + (balance-billetpris) + " kr til gode       #");
-			System.out.println("##########B##T#########");
-			System.out.println();
-
-			antalBilletterSolgt = antalBilletterSolgt + 1;
-			balance = balance - billetpris; // Billetter koster 10 kroner
 		}
+		System.out.println("##########B##T#########");
+		System.out.println("# BlueJ Trafikselskab #");
+		System.out.println("#                     #");
+		System.out.println("#        Billet       #");
+		System.out.println("#        " + billetpris + " kr.       #");
+		System.out.println("#                     #");
+		System.out.println("##########B##T#########");
+		System.out.println("# Du har " + (balance-billetpris) + " kr til gode       #");
+		System.out.println("##########B##T#########");
+		System.out.println();
+
+		antalBilletterSolgt = antalBilletterSolgt + 1;
+		balance = balance - billetpris; // Billetter koster 10 kroner
 	}
+
 
 	public int returpenge() {
 		int returbeløb = balance;
@@ -70,7 +70,7 @@ public class Billetautomat {
 		return returbeløb;
 	}
 
-
+	
 	void montørLogin(String adgangskode) {
 		if ("1234".equals(adgangskode)) {
 			montørtilstand = true;
