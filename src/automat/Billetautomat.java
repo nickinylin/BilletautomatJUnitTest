@@ -8,7 +8,7 @@ public class Billetautomat {
 	private int antalBilletterSolgt; // Antal billetter automaten i alt har solgt
 	private boolean montørtilstand;
 	private int totalbeholdning;
-	
+
 
 	/**
 	 * Opret en billetautomat der sælger billetter til 10 kr.
@@ -32,7 +32,11 @@ public class Billetautomat {
 	 * Modtag nogle penge (i kroner) fra en kunde.
 	 */
 	public void indsætPenge(int beløb) {
-		balance = balance + beløb;
+		if (beløb<0){
+			System.out.println("Du kan ikke indsætte et negativt beløb");
+		}else{
+			balance = balance + beløb;
+		}
 	}
 
 	/**
