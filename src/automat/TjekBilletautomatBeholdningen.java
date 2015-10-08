@@ -12,6 +12,7 @@ public class TjekBilletautomatBeholdningen
 		int retur;
 
 		System.out.println("*** Tjek af beholdningen");
+		System.out.println("Indsætter først 30 kr. i maskinen");
 		automat.indsætPenge(30);
 		automat.udskrivBillet();
 		automat.montørLogin("1234");
