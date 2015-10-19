@@ -34,6 +34,12 @@ public class BilletautomatTest {
 	automat.nulstil();
 	assertEquals(0, 0);
 	}
-	
+
+	@Test
+	public void testAfSalgAfBilletUdenAtIndsættePenge() {
+	automat.udskrivBillet();
+	automat.montørLogin("1234");
+	assertEquals(0, automat.getAntalBilletterSolgt());
+	}
 	
 }
