@@ -25,6 +25,15 @@ public class BilletautomatTest {
 
 		automat.indsætPenge(-100);
 		assertEquals(0, automat.getBalance());
-		
 	}
+	
+	@Test
+	public void testNulstillingAfMaskinen() {
+	automat.indsætPenge(100);
+	automat.montørLogin("1234");
+	automat.nulstil();
+	assertEquals(0, 0);
+	}
+	
+	
 }
