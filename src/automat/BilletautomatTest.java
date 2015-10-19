@@ -17,7 +17,14 @@ public class BilletautomatTest {
 		automat.setBilletpris(20);
 		automat.udskrivBillet();
 		assertEquals(30, automat.getTotal());
-
 	}
 
+	@Test
+	public void testNegativtBeløb() {
+		//		fail("Not yet implemented");
+
+		automat.indsætPenge(-100);
+		assertEquals(0, automat.getBalance());
+		
+	}
 }
